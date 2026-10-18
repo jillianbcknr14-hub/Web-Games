@@ -1,19 +1,178 @@
 
 #landing {
-    background-color: rgb(21, 21, 78);
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    align-items: center;
+/* MAIN PAGE */
 
+body {
+    background-color: #142451;
+    background-image: radial-gradient(#3555a0 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
 }
 
-/* Google Fonts Import */
-@import url('https://googleapis.com');
+/* WEBSITE CONTAINER */
 
-h1 {
-  font-family: 'VT323', monospace;
-  font-size: 34px
+.container {
+    max-width: 950px;
+    margin: auto;
+    background-color: #fff2ba;
+    border: 5px solid #ff9900;
+    box-shadow: 8px 8px 0px #080f2b;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(#fff176, #ffb900);
+    text-align: center;
+    padding: 25px;
+    border-bottom: 5px solid #ff6600;
+}
+
+header h1 {
+    font-size: 50px;
+    color: #c32235;
+    text-shadow: 3px 3px #ffffff;
+    margin: 0;
+}
+
+header p {
+    color: #1c3276;
+    font-weight: bold;
+}
+
+/* NAVIGATION */
+
+nav {
+    background: linear-gradient(#4777d5, #193e92);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 20px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+/* SCROLLING WELCOME MESSAGE */
+
+.welcome {
+    background-color: #ff6600;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* GAME SECTION */
+
+main {
+    padding: 25px;
+    text-align: center;
+}
+
+main h2 {
+    color: #c32235;
+    font-size: 28px;
+}
+
+/* GAME GRID */
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* INDIVIDUAL GAME CARDS */
+
+.game-card {
+    background-color: white;
+    border: 4px solid #1c3276;
+    padding: 10px;
+    text-decoration: none;
+    color: #1c3276;
+    box-shadow: 5px 5px 0px #777;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: scale(1.08);
+    border-color: #ff6600;
+    background-color: #fff7d6;
+}
+
+.game-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.game-card p {
+    color: red;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+/* GAME THUMBNAILS */
+
+.game-image {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    border: 3px inset #555;
+}
+
+.frog {
+    background: linear-gradient(#a8ed70, #39a936);
+}
+
+.guessing {
+    background: linear-gradient(#ffdb69, #ff8c2e);
+}
+
+.memory {
+    background: linear-gradient(#c8a5ff, #8555cf);
+}
+
+/* BLINKING PLAY NOW TEXT */
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #193e92;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+}
+
+/* MOBILE SUPPORT */
+
+@media (max-width: 650px) {
+    .game-container {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+}
+
 }
 
 
@@ -97,3 +256,44 @@ button {
   background-color: #fff;
   transform: rotateY(180deg); /* Starts flipped away from user */
 }
+
+
+
+#GuessingGame {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e7c465;
+    padding: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 180px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
